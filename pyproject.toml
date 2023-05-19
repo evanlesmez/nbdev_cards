@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "nbdev-cards"
+version = "0.1.0"
+description = ""
+authors = ["Evan Lesmez <evan.lesmez@gmail.com>"]
+readme = "README.md"
+packages = [{include = "nbdev_cards"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nbdev = "^2.3.12"
+jupyter = "^1.0.0"
+jupyterlab = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
