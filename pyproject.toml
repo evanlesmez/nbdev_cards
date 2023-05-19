@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "nbdev_cards"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 nbdev = "^2.3.12"
 jupyter = "^1.0.0"
 jupyterlab = "^4.0.0"

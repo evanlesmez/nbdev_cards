@@ -1,4 +1,4 @@
-include settings.ini
+dinclude settings.ini
 include LICENSE
 include CONTRIBUTING.md
 include README.md
