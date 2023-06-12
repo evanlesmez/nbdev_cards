@@ -7,23 +7,34 @@ __all__ = ['suits', 'ranks', 'Card']
 from fastcore.utils import *
 
 # %% ../nbs/00_card.ipynb 4
-suits = ["♣️","♦️","♥️","♠️"]
-ranks = [None, "A"] + [str(x) for x in range(2,11)] + ["J", "Q", "K"]
+suits = ["♣️", "♦️", "♥️", "♠️"]
+ranks = [None, "A"] + [str(x) for x in range(2, 11)] + ["J", "Q", "K"]
 
 # %% ../nbs/00_card.ipynb 13
 class Card:
-    'A playing card'
-    def __init__(self, 
-        suit:int, # an index into `suits`
-        rank:int): # an index into `ranks`
+    "A playing card"
+
+    def __init__(
+        self, suit: int, rank: int  # an index into `suits`
+    ):  # an index into `ranks`
         self.suit, self.rank = suit, rank
-    def __str__(self): return f"{ranks[self.rank]} {suits[self.suit]}"
+
+    def __str__(self):
+        return f"{ranks[self.rank]} {suits[self.suit]}"
+
     __repr__ = __str__
 
 # %% ../nbs/00_card.ipynb 19
 @patch
-def __eq__(self: Card, c: Card): return (self.suit, self.rank) == (c.suit, c.rank)
+def __eq__(self: Card, c: Card):
+    return (self.suit, self.rank) == (c.suit, c.rank)
+
+
 @patch
-def __lt__(self:Card, c:Card): return (self.suit, self.rank) < (c.suit, c.rank)
+def __lt__(self: Card, c: Card):
+    return (self.suit, self.rank) < (c.suit, c.rank)
+
+
 @patch
-def __gt__(self:Card, c:Card): return (self.suit, self.rank) > (c.suit, c.rank)
+def __gt__(self: Card, c: Card):
+    return (self.suit, self.rank) > (c.suit, c.rank)
